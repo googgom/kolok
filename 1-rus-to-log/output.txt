@@ -2,12 +2,26 @@
     {
         "literals": [
             {
-                "predicate": "Лев",
+                "predicate": "Продает",
                 "args": ["x"],
                 "negated": true
             },
             {
-                "predicate": "Хищник",
+                "predicate": "Покупает",
+                "args": ["x"],
+                "negated": true
+            }
+        ]
+    },
+    {
+        "literals": [
+            {
+                "predicate": "Покупает",
+                "args": ["x"],
+                "negated": true
+            },
+            {
+                "predicate": "Дурак",
                 "args": ["x"],
                 "negated": false
             }
@@ -16,7 +30,7 @@
     {
         "literals": [
             {
-                "predicate": "Лев",
+                "predicate": "Покупает",
                 "args": ["a"],
                 "negated": false
             }
@@ -25,49 +39,12 @@
     {
         "literals": [
             {
-                "predicate": "Хищник",
-                "args": ["x"],
+                "predicate": "Дурак",
+                "args": ["a"],
                 "negated": true
             },
             {
-                "predicate": "ЕстМясо",
-                "args": ["x"],
-                "negated": false
-            }
-        ]
-    },
-    {
-        "literals": [
-            {
-                "predicate": "ЕстМясо",
-                "args": ["x"],
-                "negated": true
-            },
-            {
-                "predicate": "Вегетарианец",
-                "args": ["x"],
-                "negated": true
-            }
-        ]
-    },
-    {
-        "literals": [
-            {
-                "predicate": "Вегетарианец",
-                "args": ["x"],
-                "negated": true
-            },
-            {
-                "predicate": "ЕстМясо",
-                "args": ["x"],
-                "negated": true
-            }
-        ]
-    },
-    {
-        "literals": [
-            {
-                "predicate": "Вегетарианец",
+                "predicate": "Продает",
                 "args": ["a"],
                 "negated": false
             }

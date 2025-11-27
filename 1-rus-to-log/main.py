@@ -1,7 +1,7 @@
 import os
 import requests
+from config import *
 
-DEEPSEEK_API_KEY = "sk-8bac82531d764dcc86b09768d62d33f3"
 PROMPT_FILE = "prompt.txt"
 INPUT_FILE = "input.txt"
 OUTPUT_FILE = "output.txt"

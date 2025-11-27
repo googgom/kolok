@@ -3,13 +3,11 @@ import shutil
 import subprocess
 import requests
 from numpy.random import random_integers
-
 from tests.problem import *
 import random
 
 
-
-def check_input():
+def launch():
     if not os.path.exists("input.txt") or os.path.getsize("input.txt") == 0:
         com = int(input("Выберите сложность(1-3):")) - 1
         index = random.randint(1, 3)
@@ -26,7 +24,10 @@ def main():
     # Путь к текущему каталогу
     base_dir = os.path.dirname(os.path.abspath(__file__))
 
-    check_input()
+    launch()
+
+    with open("input.txt", 'r', encoding='utf-8') as f:
+        print(f.read())
 
     # Шаг 1: Копируем input.txt в 1-rus-to-log/input.txt
     input_path = os.path.join(base_dir, "input.txt")
@@ -38,6 +39,7 @@ def main():
     else:
         print(f"Ошибка: файл {input_path} не найден.")
         return
+
 
     # Шаг 2: Запускаем main.py в каталоге 1-rus-to-log
     module1_main_path = os.path.join(base_dir, "1-rus-to-log", "main.py")

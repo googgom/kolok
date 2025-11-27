@@ -115,7 +115,7 @@ def resolve(c1, c2):
                 return Clause(new_literals), substitution#Новая клауза - результат резолюции и подстановка для лога
     return None, None
 
-def resolution(clauses, max_steps=100):
+def resolution(clauses, max_steps=50):
     log = []
     step = 1
     clauses = list(set(clauses)) #Убираем дубликаты клауз!
@@ -160,11 +160,6 @@ def read_clauses(filename):
     loaded_clauses = [dict_to_clause(clause) for clause in loaded_clauses_dict]
     return loaded_clauses
 
-def write_clauses(clauses, filename):
-    # Сохраняем в файл
-    clauses_dict = [clause.to_dict() for clause in clauses]
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(clauses_dict, f, ensure_ascii=False, indent=4)
 
 def write_log(log, proof, filename):
     with open(filename, "w", encoding="utf-8") as f:
@@ -178,10 +173,6 @@ def write_log(log, proof, filename):
 if __name__ == "__main__":
     #Основной режим работы
     clauses = read_clauses("input.txt")
-
-    #clauses = read_clauses("clauses.json")
-    #write_clauses(clauses, "clauses.json")
-    #write_clauses(clauses, "input.txt")
 
     proof, log = resolution(clauses)
     write_log(log, proof, "output.txt")
