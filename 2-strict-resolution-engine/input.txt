@@ -1,0 +1,76 @@
+[
+    {
+        "literals": [
+            {
+                "predicate": "Лев",
+                "args": ["x"],
+                "negated": true
+            },
+            {
+                "predicate": "Хищник",
+                "args": ["x"],
+                "negated": false
+            }
+        ]
+    },
+    {
+        "literals": [
+            {
+                "predicate": "Лев",
+                "args": ["a"],
+                "negated": false
+            }
+        ]
+    },
+    {
+        "literals": [
+            {
+                "predicate": "Хищник",
+                "args": ["x"],
+                "negated": true
+            },
+            {
+                "predicate": "ЕстМясо",
+                "args": ["x"],
+                "negated": false
+            }
+        ]
+    },
+    {
+        "literals": [
+            {
+                "predicate": "ЕстМясо",
+                "args": ["x"],
+                "negated": true
+            },
+            {
+                "predicate": "Вегетарианец",
+                "args": ["x"],
+                "negated": true
+            }
+        ]
+    },
+    {
+        "literals": [
+            {
+                "predicate": "Вегетарианец",
+                "args": ["x"],
+                "negated": true
+            },
+            {
+                "predicate": "ЕстМясо",
+                "args": ["x"],
+                "negated": true
+            }
+        ]
+    },
+    {
+        "literals": [
+            {
+                "predicate": "Вегетарианец",
+                "args": ["a"],
+                "negated": false
+            }
+        ]
+    }
+]
